@@ -1,0 +1,2988 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Chapter%205/">
+      
+      
+        <link rel="next" href="../Chapter%207/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Chapter 6 - BruceYang's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-6entity-relationship-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BruceYang&#39;s Blog" class="md-header__button md-logo" aria-label="BruceYang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BruceYang's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to happy mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to happy mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BruceYang&#39;s Blog" class="md-nav__button md-logo" aria-label="BruceYang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BruceYang's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    目录
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            目录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Design Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Design phases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Design Alternatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-design-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Design Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Database Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Database Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Entities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-relationship-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Relationship Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-degree-of-a-relationship-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Degree of a Relationship Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-mapping-cardinality-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Mapping Cardinality Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Mapping Cardinality Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-one-to-one-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1 One-to-One Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-one-to-many-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2 One-to-Many Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-many-to-one-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.3 Many-to-One Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-many-to-many-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.4 Many-to-Many Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-total-and-partial-participation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Total and Partial Participation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9 Primary Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-weak-entity-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10 Weak Entity Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-rebundant-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11 Rebundant Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reduction-to-relational-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reduction to Relational Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reduction to Relational Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-representing-entity-sets-with-simple-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Representing Entity Sets with Simple Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-representing-relational-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Representing Relational Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-rebundancy-of-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Rebundancy of Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-composite-and-multivalued-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Composite and Multivalued Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-design-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Design Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Design Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-common-mistakes-in-e-r-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Common Mistakes in E-R Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-placement-of-relationship-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Placement of Relationship Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-binary-vs-non-binary-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Binary VS Non-Binary Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-converting-non-binary-relationships-to-binary-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Converting Non-Binary Relationships to Binary Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-e-r-desogn-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 E-R Desogn Decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-extended-er-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 Extended ER Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2_7" id="__nav_3_1_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7 Relational Database Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 7 Relational Database Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2_7_2" id="__nav_3_1_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    相关题型的整理
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_1_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            相关题型的整理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E6%B1%82%E5%80%99%E9%80%89%E9%94%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    求候选键
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E6%AD%A3%E5%88%99%E8%A6%86%E7%9B%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    正则覆盖
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E5%88%A4%E6%96%AD%E6%9C%89%E6%8D%9F%E5%88%86%E8%A7%A3%E4%B8%8E%E6%97%A0%E6%8D%9F%E5%88%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    判断有损分解与无损分解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E5%B0%86%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3%E4%B8%BA3NF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    将关系模式分解为3NF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../数据库系统(Database System)/Chapter 8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HomeWork
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            HomeWork
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2 Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3 Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4 Inside Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5 Inherence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HW Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WK's Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    跨专业选修课
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            跨专业选修课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    会计学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            会计学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_1" id="__nav_3_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章 会计要素与复式记账
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章 会计循环
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章 货币资金与交易性金融资产
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章 应收款项
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第六章 存货
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_2" id="__nav_3_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    作业
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            作业
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/HW1_%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章习题二
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/HW2_%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章习题一、习题二
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B9%A0%E9%A2%985%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章习题五
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%B9%A0%E9%A2%981%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%B9%A0%E9%A2%982.3%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章习题二、习题三
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../会计学/作业/习题4.1杨思行.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E4%B9%A0%E9%A2%982%E4%B9%A0%E9%A2%983%E6%9D%A8%E6%80%9D%E8%A1%8C.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章习题二、习题三
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%B9%A0%E9%A2%981%E6%9D%A8%E6%80%9D%E8%A1%8C.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%B9%A0%E9%A2%982.3.4.5.6%E6%9D%A8%E6%80%9D%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章习题二、三、四、五、六
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Design Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Design phases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Design Alternatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-design-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Design Approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Database Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Database Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Entities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-relationship-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Relationship Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-degree-of-a-relationship-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Degree of a Relationship Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-mapping-cardinality-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Mapping Cardinality Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Mapping Cardinality Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-one-to-one-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1 One-to-One Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-one-to-many-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2 One-to-Many Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-many-to-one-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.3 Many-to-One Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-many-to-many-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.4 Many-to-Many Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-total-and-partial-participation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Total and Partial Participation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9 Primary Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-weak-entity-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10 Weak Entity Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-rebundant-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11 Rebundant Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reduction-to-relational-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reduction to Relational Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reduction to Relational Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-representing-entity-sets-with-simple-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Representing Entity Sets with Simple Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-representing-relational-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Representing Relational Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-rebundancy-of-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Rebundancy of Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-composite-and-multivalued-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Composite and Multivalued Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-design-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Design Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Design Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-common-mistakes-in-e-r-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Common Mistakes in E-R Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-placement-of-relationship-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Placement of Relationship Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-binary-vs-non-binary-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Binary VS Non-Binary Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-converting-non-binary-relationships-to-binary-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Converting Non-Binary Relationships to Binary Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-e-r-desogn-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 E-R Desogn Decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-extended-er-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 Extended ER Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-6entity-relationship-model">Chapter 6:Entity-Relationship Model</h1>
+<h2 id="database-design-process">Database Design Process</h2>
+<p><img alt="alt text" src="../image-69.png" /></p>
+<h2 id="1-design-phases">1. Design phases</h2>
+<ul>
+<li>初始阶段(需求规范)：充分描述潜在数据库用户的数据需求</li>
+<li>第二阶段(概念设计)：选择数据模型<ul>
+<li>应用所选数据模型的概念</li>
+<li>将这些需求转换为数据库的概念模式</li>
+<li>完全开发的概念模式代表了企业的功能要求：描述对数据执行的操作(或事务)类型</li>
+</ul>
+</li>
+<li>最后阶段(数据库设计)：从抽象数据模型转向数据库的实现<ul>
+<li>逻辑设计(Logical Design)：决定书苦苦模式<ul>
+<li>数据库设计要求我们找到一个"好的"关系模式集合</li>
+<li>业务决策——我们应该在数据库中记录哪些属性</li>
+<li>计算机科学决策——我们应该拥有哪些关系模式，以及属性应该如何在各种关系模式之间分配</li>
+</ul>
+</li>
+<li>物理设计——决定数据库的物理布局</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-design-alternatives">2. Design Alternatives</h2>
+<ul>
+<li>在设计数据库架构时，我们必须确保避免两个主要陷阱<ul>
+<li>冗余：糟糕的设计可能会导致重复的信息<ul>
+<li>信息的冗余表示可能会导致各种信息副本之间的数据不一致</li>
+</ul>
+</li>
+<li>不完整：糟糕的设计可能会使企业</li>
+</ul>
+</li>
+<li>避免糟糕的设计是不够的。可能有很多好的设计让我们必须从中进行选择</li>
+<li>数据库设计可能是一个具有挑战性的问题<ul>
+<li>巨大的设计空间</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-design-approaches">3. Design Approaches</h2>
+<ul>
+<li>实体关系模型<ul>
+<li>将企业建模为实体和关系的集合</li>
+<li>实体：可以与其他对象区别开来的事物或对象<ul>
+<li>由一组属性描述</li>
+</ul>
+</li>
+<li>关系：多个实体之间的关联</li>
+<li>用实体关系图以图示方式表示</li>
+</ul>
+</li>
+<li>归一化理论<ul>
+<li>正式确定哪些设计是坏的，并对其进行测试</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-70.png" /><br />
+- 一个方形款就是一个实体的集合
+- 实体与实体之间有关系，一个菱形框表示关系
+    - 一对一(↔)
+    - 多对一(→)
+    - 一对多(←)
+    - 这里<code>instructor</code>属性不需要<code>dept</code>属性，因为在<code>department</code>实体里有了，否则会冗余
+- 每个实体直接转换为关系模式。关系转换为元组，元素为两个表的<code>foreign key</code>.对于一对多的情况(如<code>instructor</code>和<code>department</code>)转换后primary key仍为ID
+- 为了减少表的数量可以把主键相同的表合并
+- 双横线与单横线
+    - 双横线表示每个对象都必须参与关系，而单横线则表示对象可以不参与关系。
+    - 如<code>course_dept</code>和<code>course</code>为双横线，则表示每一个课程都要对应一个开课部门，而<code>department</code>和<code>course_dept</code>为单横线，说明有的院系可以不开设课程
+- 有些联系是隐含的，如授课老师和听课的同学
+- <code>section</code>不足以唯一确定元组，称为弱实体(weak entity)，依赖于另一个实体，因为<code>course_id</code>放在<code>section</code>会有冗余，因此没有这个属性，导致形成一个弱实体(对应的relation要加上双框)，<code>section</code>不能离开<code>course</code>存在
+- <code>relationship</code>上也可以带属性，如<code>takes</code>上的<code>grade</code>
+- 关系双方可以是相同的实体集合，<code>course</code>这里的<code>preeq</code>是多对多，表示一门课可以有多门预修课，一门课也可以是多门课的预修课。{}里面是多个值，表示复合属性。这里表示<code>time_slot_id</code>实际上可以由这三个属性复合而成</p>
+<h2 id="4-database-modeling">4. Database Modeling</h2>
+<h3 id="41-entities">4.1 Entities</h3>
+<ul>
+<li>数据库可以建模为：<ul>
+<li>实体的集合</li>
+<li>实体之间的关系</li>
+</ul>
+</li>
+<li>实体是存在且可以与其他对象区分开来的对象，如特定人员、公司、事件、工厂</li>
+<li>实体具有属性，如对于一个人来说，有地址、姓名、性别等</li>
+<li>实体集是一组共享相同属性的相同类型的实体，如所有人员、公司、树、假日的集合</li>
+<li>实体集可以按如下方式以图形方式表示<ul>
+<li>实体集以矩形框表示</li>
+<li>实体矩形内列出的属性</li>
+<li>下划线表示主键属性
+<img alt="alt text" src="../image-71.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="42-relationship-sets">4.2 Relationship Sets</h3>
+<ul>
+<li>关系是多个实体之间的关联</li>
+</ul>
+<p><img alt="alt text" src="../image-72.png" />
+- 关系集是$n \geq 2$个实体之间的数学关系，每个实体都取自实体集，即${e_1,e_2,...,e_n|e_1 \in E_1,e_2 \in E_2,...,e_n \in E_n}$,其中$(e_1,e_2,...,e_n)$是一个关系
+    - 按照上面的例子，$(44553,22222) \in advisor$</p>
+<p><img alt="alt text" src="../image-73.png" /></p>
+<p>### 4.3 Relationship Set with Attributes</p>
+<p>关系集也可以有属性，例如实体集instructor和student之间的advisor关系集就可能具有属性date,该属性跟踪student开始与advisor关联的时间</p>
+<p><img alt="alt text" src="../image-74.png" />
+ <img alt="alt text" src="../image-75.png" /></p>
+<p>### 4.4 Role
+ - 关系的实体集不需要是不同的
+    - 实体集的每次出现都在关系中扮演一个<code>Role</code>
+- 标签<code>course_id</code>和<code>prereq_id</code>都被称为<code>Role</code></p>
+<h3 id="45-degree-of-a-relationship-set">4.5 Degree of a Relationship Set</h3>
+<ul>
+<li>二元联系(Binary Relationship)<ul>
+<li>涉及两个实体集(或称为degree=2)</li>
+<li>数据库系统中的大多数关系都是二元的</li>
+</ul>
+</li>
+<li>在某些情况下，将关系表示为非二元关系会更方便</li>
+</ul>
+<p><img alt="alt text" src="../image-76.png" /></p>
+<h3 id="46-attributes">4.6 Attributes</h3>
+<ul>
+<li>实体由一组属性表示，这些属性是实体集的所有成员都拥有的属性<ul>
+<li><code>instructor = (ID, name, street, city, salary)</code>,<code>course = (course_id, title, credits)</code></li>
+</ul>
+</li>
+<li>域(domain)---每个属性的允许值集</li>
+<li>属性类型<ul>
+<li>Simple和Composite属性</li>
+<li>单值(Single-valued)和多值(Multi-valued)属性 eg.phone_numbers,可以同时拥有多个电话号码，所以电话号码这一属性不一定只有一个值</li>
+</ul>
+</li>
+<li>
+<p>派生(Derived)属性</p>
+<ul>
+<li>可以从其他属性计算</li>
+<li>eg.给定date_of_birth，可以计算出年龄</li>
+</ul>
+<p><img alt="alt text" src="../image-77.png" /></p>
+</li>
+</ul>
+<h3 id="47-mapping-cardinality-constraints">4.7 Mapping Cardinality Constraints</h3>
+<ul>
+<li>二元关系集的映射基数约束表示另一个实体可以通过关系集关联到实体数</li>
+<li>在描述二元关系时最有用</li>
+<li>对于二元关系集，映射基数必须是一对一、一对多、多对一、多对多类型之一</li>
+<li>我们通过在关系集和实体集之间绘制一条有向线（→）表示“一”，用一条无向线（-）表示“多”</li>
+</ul>
+<h4 id="471-one-to-one-relationships">4.7.1 One-to-One Relationships</h4>
+<ul>
+<li>教师和学生之间的一对一关系：<ul>
+<li>一个学生通过advisor<strong>最多</strong>与一名教师关联，可以没有</li>
+<li>一名教师通过advisor<strong>最多</strong>与一名学生关联，可以没有</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-78.png" /></p>
+<h4 id="472-one-to-many-relationships">4.7.2 One-to-Many Relationships</h4>
+<ul>
+<li>教师和学生之间的一对多关系：<ul>
+<li>一名教师通过advisor与多个(包括0个)学生关联</li>
+<li>一个学生通过advisor最多与一名教师关联</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-79.png" /></p>
+<h4 id="473-many-to-one-relationships">4.7.3 Many-to-One Relationships</h4>
+<ul>
+<li>教师和学生之间的多对一关系<ul>
+<li>一名教师通过advisor最多与一名学生关联</li>
+<li>一名学生通过advisor与多个(包括0个)教师关联</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-80.png" /></p>
+<h4 id="474-many-to-many-relationships">4.7.4 Many-to-Many Relationships</h4>
+<ul>
+<li>教师和学生之间的多对多关系<ul>
+<li>一名教师通过advisor与多个(包括0个)学生关联</li>
+<li>一名学生通过advisor与多个(包括0个)教师关联</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-81.png" /></p>
+<h3 id="48-total-and-partial-participation">4.8 Total and Partial Participation</h3>
+<ul>
+<li>完全参与(Total Participation)通常使用双线表示，表示实体集中的每个实体都至少参与关系集中的一个关系<ul>
+<li>例如每一个学生都应当至少有一个相关的advisor
+<img alt="alt text" src="../image-82.png" /></li>
+</ul>
+</li>
+<li>部分参与(Partial Participation)通常使用单线表示，表示某些实体可能不参与关系集中的任何关系<ul>
+<li>例如一个教师可能没有相关的advisor</li>
+</ul>
+</li>
+<li>一条线可能具有关联的最小和最大的基数，以l..h的形式表示关系，其中l是最小基数，h是最大基数<ul>
+<li>最小值是1表示完全参与</li>
+<li>最大值是1表示实体最多参与一个</li>
+<li>最大值*表示无限制</li>
+<li>例如，教师可以为0个或更多学生提供建议。学生必须有一名advisor,不能有多个advisor
+<img alt="alt text" src="../image-83.png" /></li>
+</ul>
+</li>
+<li>我们最多允许三元(或更高度数)关系中的一个箭头 来表示基数约束</li>
+<li>例如，proj_guide到instructor的箭头表示每个学生最多有一个项目的instructor<ul>
+<li>原因：这与主键的解释有关。假设有如下关系图，那么对该关系图的主键解释有两种
+<img alt="alt text" src="../253211ac7e01c92106952a82893f4d4.jpg" /></li>
+<li>来自$E_1,E_2$的一个特定实体组合可以和至多一个来自$E_3,E_4$的实体组合相关联。因此，联系R的主键可以用主键$E_1,E_2$的并集来构造</li>
+<li>来自$E_1,E_2,E_3$的一个特定实体组合至多可与来自$E_4$的一个实体组合相关联，那么，可以用$E_1,E_2,E_3$主键的并集构成R的主键。$E_1,E_2,E_4$的主码的并集也是如此
+<img alt="alt text" src="../image-84.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="49-primary-key">4.9 Primary Key</h3>
+<ul>
+<li>主键提供了一种指定如何区分实体和关系的方法，我们将考虑实体集、关系集、弱实体集</li>
+<li>根据定义 各个实体是不同的</li>
+<li>从数据库的角度来看，它们之间的差异必须用它们的属性来表示</li>
+<li>实体的属性值必须使其能够唯一标识实体<ul>
+<li>实体集中的任何两个实体集都不允许所有属性具有完全相同的值</li>
+</ul>
+</li>
+<li>实体的键就是一组足以将实体区分开来的属性</li>
+<li>为了区分关系集的各种关系，我们使用关系集中实体的各个主键<ul>
+<li>设R为涉及实体集$E_1,E_2,...,E_n$的关系集</li>
+<li>R的主键由$E_1,E_2,...,E_n$的各个主键组成</li>
+<li>如果关系集R具有与其关联的属性$a_1,a_2,...,a_m$，则R的主键还包括属性$a_1,a_2,...,a_m$</li>
+<li>eg.advisor关系集的主键是instructor.ID和student.ID:
+<img alt="alt text" src="../image-85.png" /></li>
+</ul>
+</li>
+<li>关系集的主键选择取决于关系集的映射基数<ul>
+<li>如果二元关系为一对一关系，任一参与实体集的主键都可以构成一个最小超级键(Minimal Superkey),并且可以选择其中任意一个作为主键</li>
+<li>如果二元关系为一对多关系或多对一，“多“关系一端的主键是最小超级键，作为主键</li>
+<li>如果二元关系为多对多关系，两个实体集的主键的并集是最小超级键</li>
+</ul>
+</li>
+</ul>
+<h3 id="410-weak-entity-sets">4.10 Weak Entity Sets</h3>
+<ul>
+<li>没有主键的实体集称为弱实体集</li>
+<li>弱实体集的存在取决于表示性实体集(Identifying Entity Set)的存在<ul>
+<li>它必须通过从表示到弱实体集的一对多关系集与标识实体集相关</li>
+<li>我们使用双菱形来描绘的标识性联系(Identifying Relationship)</li>
+</ul>
+</li>
+<li>弱实体集的分辨符(Discriminator，或称为部分键)是指当弱实体集所依赖的标识实体已知时区分实体集的所有实体的属性集</li>
+<li>我们用虚线为弱实体集的分辨符画下划线</li>
+<li>我们将弱实体的识别关系放在双菱形中</li>
+</ul>
+<p><img alt="alt text" src="../image-86.png" /></p>
+<p>注意：强实体集的主键不会与弱实体集一起显式存储，因为它隐含在标识关系中</p>
+<p>如果显式存储<code>course_id</code>则section可以成为强实体，但section和course之间的关系将由course和section通用属性定义的隐式关系course_id复制</p>
+<h3 id="411-rebundant-attributes">4.11 Rebundant Attributes</h3>
+<ul>
+<li>假设我们有实体集<ul>
+<li>student，属性为：ID, name, tot_cred, dept_name</li>
+<li>department，属性为：dept_name, building, budget</li>
+</ul>
+</li>
+<li>我们使用关系集stu_dept对每个学生都有一个关联部门这一事实进行建模</li>
+<li>下面student中的属性dept_name复制了关系中存在的信息，因此是多余的，并且需要被删除</li>
+<li>但是，当转换回表时，在某些情况下，该属性会重新引入</li>
+</ul>
+<p><img alt="alt text" src="../image-87.png" /></p>
+<h2 id="5-reduction-to-relational-schemas">5. Reduction to Relational Schemas</h2>
+<ul>
+<li>实体集和关系集可以统一表示为表示数据库内容的关系架构</li>
+<li>符合E-R图的数据库可以由架构集合表示</li>
+<li>对于每个实体集和关系集，都有一个唯一的架构，该架构分配有相应的实体集或关系集的名称</li>
+<li>每个架构都有许多列(通常对应于属性)，这些列具有唯一的名称</li>
+</ul>
+<h3 id="51-representing-entity-sets-with-simple-attributes">5.1 Representing Entity Sets with Simple Attributes</h3>
+<ul>
+<li>强实体集简化为具有相同属性的架构</li>
+<li>弱实体集将变成一个表，该表包含标识强实体集的主键<ul>
+<li>表的主键是弱实体集的分辨符与标识强实体集的主键的并集</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-88.png" />
+- section表的主键是<code>(course_id,sec_id,semester,year)</code></p>
+<h3 id="52-representing-relational-sets">5.2 Representing Relational Sets</h3>
+<p>一个多对多关系表示为一个架构，其中包含两个参与实体集的主键的属性</p>
+<ul>
+<li>e.g.对于一个关系集advisor的模式：advisor=(<u>s_id,i_id</u>)</li>
+</ul>
+<p><img alt="alt text" src="../image-89.png" /></p>
+<h3 id="53-rebundancy-of-schemas">5.3 Rebundancy of Schemas</h3>
+<p>在多段总计的多对一和一对多关系集可以通过向"多"的一段添加一个额外的属性来表示，该属性包含“一”一端的主键</p>
+<ul>
+<li>e.g. 将关系集inst_dept创建模式稀释到两个实体集中</li>
+</ul>
+<p><img alt="alt text" src="../image-90.png" /></p>
+<ul>
+<li>
+<p>对于一对一关系集，可以选择任何一方作为“多”的一端</p>
+<ul>
+<li>也就是说，可以将更多的属性添加到与两个实体集对应的任意表中</li>
+</ul>
+</li>
+<li>
+<p>如果参与在“多”的一端是部分参与，则在与“多”的一端对应的模式中用额外的属性替换模式可能会导致null值</p>
+</li>
+<li>与将弱实体集链接到其标识的强实体集的关系集对应的模式是多余的<ul>
+<li>e.g.section模式已包含将显示在sec_course模式中的属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="54-composite-and-multivalued-attributes">5.4 Composite and Multivalued Attributes</h3>
+<ul>
+<li>通过为每个组件属性创建单独的属性来扁平化复合属性<ul>
+<li>就像在C语言里定义了一个结构，但是关系数据库里每个属性都必须是简单数据类型，就必须把这些复合属性铺平</li>
+<li>e.g.给定的实体集instructor,first_name, last_name 与实体集对应的模式具有两个属性 name_first_name 和 name_last_name</li>
+<li>如果没有歧义，则省略前缀</li>
+<li>忽略多值属性，扩展instructor模式为：instructor(ID, first_name, middle_initial,  last_name, street_number, street_name, apt_number, city, state, zip_code,     date_of_birth, age)<ul>
+<li>phone_number属性被省略</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实体E的多值属性M由单独的模式EM表示<ul>
+<li>模式EM具有对应于E的主键的属性和对应域多值属性M的属性<ul>
+<li>e.g.instructor的多值属性phone_number由模式inst_phone表示：inst_phone(<u>ID,phone_number</u>)</li>
+</ul>
+</li>
+<li>多值属性的每个值都映射到模式EM上关系的单独元祖<ul>
+<li>e.g.主键为222222，456-7890 和 123-4567 的 instructor 实体映射到两个元组：(22222,456-7890)和(22222,123-4567)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>特殊情况：实体time_slot只有一个除主键属性之外的属性，并且该属性是多值的<ul>
+<li>time_slot(<u>time_slot_id</u>,{day,start_time,end_time})可以被拆分为<ul>
+<li>time_slot(<u>time_slot_id</u>)</li>
+<li>time_slot_details(<u>time_slot_id,day,start_time</u>.end_time)</li>
+</ul>
+</li>
+<li>优化：不创建实体对应的关系，time_slot_details(<u>time_slot_id,day,start_time</u>.end_time)</li>
+</ul>
+</li>
+<li>但是因为这个优化使得time_slot属性不能是外键，可能需要用trigger来实现</li>
+</ul>
+<p><img alt="alt text" src="../image-91.png" /></p>
+<h2 id="6-design-issues">6. Design Issues</h2>
+<h3 id="61-common-mistakes-in-e-r-diagrams">6.1 Common Mistakes in E-R Diagrams</h3>
+<ul>
+<li>
+<p>信息冗余 
+<img alt="alt text" src="../image-92.png" /></p>
+<blockquote>
+<p>student的dept_name应该去掉</p>
+</blockquote>
+</li>
+<li>
+<p>关系属性使用不当
+<img alt="alt text" src="../image-93.png" /></p>
+<blockquote>
+<p>这是一门课，可能会有很多次作业，不能只用一个实体</p>
+<p><img alt="alt text" src="../image-94.png" /></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="62-placement-of-relationship-attributes">6.2 Placement of Relationship Attributes</h3>
+<p><img alt="alt text" src="../image-95.png" /></p>
+<ul>
+<li>第一种方法：可以记录每次访问日期</li>
+<li>第二种方法：只能记录用户最近一次访问日期，不完整</li>
+</ul>
+<h3 id="63-binary-vs-non-binary-relationships">6.3 Binary VS Non-Binary Relationships</h3>
+<ul>
+<li>尽管可以用多个不同的二元关系集替换任何非二元关系集，但n元关系集可以更清楚地显示多个实体参与单个关系</li>
+<li>一些看起来非二元的关系可能更适合使用二元关系来表示<ul>
+<li>例如，将孩子与他的父亲和母亲联系起来的三元关系父母最好用两种二元关系来代替</li>
+<li>使用两个二元关系允许出现部分信息(例如，只有母亲知道的信息)</li>
+</ul>
+</li>
+<li>但是有些关系天生就是非二元的</li>
+</ul>
+<h3 id="64-converting-non-binary-relationships-to-binary-form">6.4 Converting Non-Binary Relationships to Binary Form</h3>
+<p>通常，任何非二元关系都可以通过创建人工实体集来使用二元关系来表示</p>
+<ul>
+<li>将实体集 A、B 和 C 之间的 R 替换为实体集 E 和三个关系集：
+<img alt="alt text" src="../image-96.png" /></li>
+<li>为E创建特殊标识属性</li>
+<li>将R的所有属性添加到E</li>
+<li>对于每一个R中的关系$(a_i,b_i,c_i)$<ul>
+<li>在实体集E这种建立新实体$c_i$</li>
+<li>将$(e_i,a_i)$添加到$R_A$;将$(e_i,b_i)$添加到$R_B$;将$(e_i,c_i)$添加到$R_C$</li>
+</ul>
+</li>
+<li>我们还需要转换所有的约束<ul>
+<li>可能无法转换所有约束</li>
+<li>已翻译的模式中可能不存在不能对应于R的任何实例</li>
+<li>我们可以通过使 E 成为由三个关系集标识的弱实体集来避免创建标识属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="65-e-r-desogn-decisions">6.5 E-R Desogn Decisions</h3>
+<ul>
+<li>使用属性或实体集来表示对象</li>
+<li>实际概念是用实体集还是关系集最好地表达</li>
+<li>使用三元关系或二元关系</li>
+<li>使用强实体集或弱实体集</li>
+</ul>
+<h3 id="66-extended-er-features">6.6 Extended ER Features</h3>
+<ul>
+<li>特化(Specialization)<ul>
+<li>自上而下的设计过程：我们再实体集中指定与几何中的其他实体不同的子分组</li>
+<li>属性继承：较低级别的实体集继承其链接到的较高级别实体集的所有属性和关系参与</li>
+</ul>
+</li>
+<li>概化(Generalization)<ul>
+<li>自下而上的设计过程：相同特征的多个实体集合并到更高级别的实体集中</li>
+</ul>
+</li>
+<li>特化和概化是彼此的简单倒置，它们在E-R图中以相同的方式表示</li>
+<li>术语特化和概化可以互相使用</li>
+</ul>
+<p><img alt="alt text" src="../image-97.png" /></p>
+<ul>
+<li>特化和概化的设计约束<ul>
+<li>对实体是否可以属于单个概化中的多个较低级别实体集的约束<ul>
+<li>不相交(Disjoint)<ul>
+<li>一个实体只能属于一个较低级别的实体集</li>
+<li>在E-R图中，通过让多个较低级别的实体集链接到同一个三角形来表示</li>
+</ul>
+</li>
+<li>重叠(Overlapping)<ul>
+<li>一个实体可以属于多个较低级别的实体集</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>完全性约束(Completeness Constraint)<ul>
+<li>指较高级别实体集中的实体是否必须至少属于概化中的至少一个较低级别实体集<ul>
+<li>全部(Total):实体必须属于较低级别的实体集之一</li>
+<li>部分(Partial):实体不必属于较低级别的实体集之一</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

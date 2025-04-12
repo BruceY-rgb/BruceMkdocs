@@ -1,0 +1,3265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Chapter%204/">
+      
+      
+        <link rel="next" href="../Chapter%206/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Chapter 5 - BruceYang's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-advanced-sql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="BruceYang&#39;s Blog" class="md-header__button md-logo" aria-label="BruceYang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BruceYang's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to happy mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to happy mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="BruceYang&#39;s Blog" class="md-nav__button md-logo" aria-label="BruceYang's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BruceYang's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    目录
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            目录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-accessing-sql-from-programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Accessing SQL from Programming Languages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Accessing SQL from Programming Languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 JDBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-result-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Result Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepared-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepared Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-sqlj" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 SQLJ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-odbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 ODBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.3 ODBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odbc-prepared-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODBC Prepared Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-odbc-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      More ODBC Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-embedded-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 Embedded SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.4 Embedded SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-and-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open and Fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-procedural-constructs-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Procedural Constructs in SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Procedural Constructs in SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-procedural-extensions-and-stored-procedurals" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Procedural Extensions and Stored Procedurals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-functions-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 Functions and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Functions and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sql-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 SQL Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sql-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 SQL Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-procedural-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Procedural Constructs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-external-language-functionsprocedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 External Language Functions/Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Triggers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      When not to use Triggers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2_7" id="__nav_3_1_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7 Relational Database Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 7 Relational Database Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2_7_2" id="__nav_3_1_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    相关题型的整理
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_1_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            相关题型的整理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E6%B1%82%E5%80%99%E9%80%89%E9%94%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    求候选键
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E6%AD%A3%E5%88%99%E8%A6%86%E7%9B%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    正则覆盖
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E5%88%A4%E6%96%AD%E6%9C%89%E6%8D%9F%E5%88%86%E8%A7%A3%E4%B8%8E%E6%97%A0%E6%8D%9F%E5%88%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    判断有损分解与无损分解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A2%98%E5%9E%8B/%E5%B0%86%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3%E4%B8%BA3NF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    将关系模式分解为3NF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../数据库系统(Database System)/Chapter 8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HomeWork
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            HomeWork
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A/HW6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HomeWork 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2 Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3 Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4 Inside Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5 Inherence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HW Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%28OOP%29/Quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WK's Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    跨专业选修课
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            跨专业选修课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    会计学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            会计学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_1" id="__nav_3_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章 会计要素与复式记账
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章 会计循环
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章 货币资金与交易性金融资产
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章 应收款项
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/Chapter6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第六章 存货
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_2" id="__nav_3_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    作业
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            作业
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/HW1_%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一章习题二
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/HW2_%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章习题一、习题二
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B9%A0%E9%A2%985%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二章习题五
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%B9%A0%E9%A2%981%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%B9%A0%E9%A2%982.3%E6%9D%A8%E6%80%9D%E8%A1%8C_3230104703.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第三章习题二、习题三
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../会计学/作业/习题4.1杨思行.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E4%B9%A0%E9%A2%982%E4%B9%A0%E9%A2%983%E6%9D%A8%E6%80%9D%E8%A1%8C.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第四章习题二、习题三
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%B9%A0%E9%A2%981%E6%9D%A8%E6%80%9D%E8%A1%8C.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章习题一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%9A%E8%AE%A1%E5%AD%A6/%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%B9%A0%E9%A2%982.3.4.5.6%E6%9D%A8%E6%80%9D%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第五章习题二、三、四、五、六
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-accessing-sql-from-programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Accessing SQL from Programming Languages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Accessing SQL from Programming Languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 JDBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-result-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Result Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepared-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepared Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-sqlj" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 SQLJ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-odbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 ODBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.3 ODBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odbc-prepared-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODBC Prepared Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-odbc-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      More ODBC Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-embedded-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 Embedded SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.4 Embedded SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-and-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open and Fetch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-procedural-constructs-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Procedural Constructs in SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Procedural Constructs in SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-procedural-extensions-and-stored-procedurals" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Procedural Extensions and Stored Procedurals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-functions-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 Functions and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Functions and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sql-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 SQL Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sql-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 SQL Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-procedural-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Procedural Constructs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-external-language-functionsprocedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 External Language Functions/Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Triggers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      When not to use Triggers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-5-advanced-sql">Chapter 5 Advanced SQL</h1>
+<h2 id="51-accessing-sql-from-programming-languages">5.1 Accessing SQL from Programming Languages</h2>
+<p>数据库程序员必须能够掌握通用编程语言，至少有两个原因</p>
+<ul>
+<li>并非所有查询都可以用SQL表示，因为SQL不能提供通用语言的全部表达能力</li>
+<li>非声明性操作(比如打印报告、与用户交互或将查询结果发送到图形用户界面)不能在SQL中完成</li>
+</ul>
+<p>有两种方法可以从通用编程语言访问数据库：</p>
+<ul>
+<li>API(应用程序接口)：通用程序可以使用函数集合连接到数据库服务器并与之通信，程序可以在运行时(RunTime)用字符串构造SQL查询，提交查询，并且将检索的结果放到程序变量中(一次仅能存储一个元组)，动态SQL有以下标准<ul>
+<li>JDBC:JAVA用于连接数据库的API</li>
+<li>ODBC:原来为C写的用于连接数据库的API，现在也适用于C++、C#、Ruby、Go等</li>
+</ul>
+</li>
+<li>嵌入式SQL(Embedded SQL)：提供程序与数据库服务器交互的方法<ul>
+<li>SQL语句在编译时转换为函数调用</li>
+<li>在运行时，这些函数调用使用提供动态SQL工具的API连接到数据库</li>
+</ul>
+</li>
+</ul>
+<h3 id="511-jdbc">5.1.1 JDBC</h3>
+<ul>
+<li>JDBC是一个JAVA API，用于与支持SQL的数据库系统进行通信</li>
+<li>JDBC支持用于查询和更新数据以及检索查询结果的各种功能</li>
+<li>JDBC还支持元数据检索，例如查询数据库中存在的关系以及关系属性的名称和类型</li>
+</ul>
+<p><strong>JDBC一般与数据库通信的模型</strong></p>
+<ol>
+<li>
+<p>打开连接</p>
+</li>
+<li>
+<p>创建"statement"对象</p>
+</li>
+<li>
+<p>使用"statement"对象执行查询以发送查询并获取结果</p>
+</li>
+<li>
+<p>用于处理错误的异常机制</p>
+</li>
+</ol>
+<blockquote>
+<p>在下面的程序中，必须在开头出导入java.sql.*,里面包含了JDBC提供的功能借口定义</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">JDBCexample</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dbid</span><span class="p">,</span><span class="n">String</span><span class="w"> </span><span class="n">userid</span><span class="p">,</span><span class="n">String</span><span class="w"> </span><span class="n">passwd</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="o">=</span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;jdbc:oracle:thin:@db.yale.edu:2000:univdb&quot;</span><span class="p">,</span><span class="n">userid</span><span class="p">,</span><span class="n">passwd</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">        </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="o">=</span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<span class="w">        </span><span class="p">...</span><span class="na">Do</span><span class="w"> </span><span class="n">actual</span><span class="w"> </span><span class="n">work</span><span class="w"> </span><span class="n">here</span><span class="p">...</span>
+<span class="w">        </span><span class="n">stmt</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">        </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">sqle</span><span class="p">){</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;SQLException: &quot;</span><span class="o">+</span><span class="n">sqle</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Database Connection:在Java程序访问数据库的第一步是建立与数据库的连接，连接好后才能执行SQL语句。具体来说，需要使用DriverManager类的getConnection()方法，它接受以下参数：<ul>
+<li>数据库相关信息，包括URL/机器名，协议，端口号，数据库名<ul>
+<li>JDBC并没有规定协议，协议取决于数据库实现</li>
+<li>JDBC支持多种协议，比如 jdbc:oracle:thin 是 Oracle 支持的协议，而 jdbc:mysql 是 MySQL 支持的协议等</li>
+</ul>
+</li>
+<li>数据库用户名</li>
+<li>密码</li>
+<li>返回一个Connection对象，用于与数据库通信</li>
+</ul>
+</li>
+<li>SQL Statements:建立连接后，就要将SQL语句发送到数据库系统，然后在里面执行语句，在java中通过Statement类的实例来做到这一点。Statement对象并非SQL语句本身，而是一种让Java程序里调用和传送SQL语句到数据库相关的方法的对象，而执行语句需要调用executeQuery()或executeUpdate()方法，它们分别对应查询语句和费查询语句(更新，插入，删除，创建)等的执行，并且后者会返回一个表示被插入/更新/删除的元组数(如果是创建语句的话则返回0)</li>
+<li>Exceptions<ul>
+<li>执行任何的SQL语句都有可能抛出异常，所以编程时需要记得用try{...}catch{...}语句块捕获异常</li>
+<li>异常可以分为SQLException(与SQL相关的异常)和Exception(一般的异常，与Java相关，比如空指针，数组越界等)</li>
+<li>如果可以的话，最好编写一个完整的异常处理函数，以应对各种异常</li>
+</ul>
+</li>
+<li>Resource Management<ul>
+<li>建立连接、创建语句以及其他JDBC对象都会占用系统资源，所以需要确保程序能够关闭上述这些资源，以免产生资源池耗尽导致的故障</li>
+<li>一种方法是显式调用关闭语句(比如conn.close()、stmt.close()分别关闭连接和语句)，但一旦遇到异常，提前退出的话，这些关闭语句就来不及被调用，那么问题还是没解决</li>
+<li>更可靠的方法是使用try-with-resources构造块，就是在try关键字和语句块之间加上圆括号，里面包含连接、语句对象等资源，这样的话当离开try语句块时，这些资源会被自动关闭</li>
+</ul>
+</li>
+</ul>
+<h4 id="update">update</h4>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">{</span>
+<span class="w">    </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="s">&quot;insert into instructor values(&#39;77987&#39;,&#39;Kim&#39;,&#39;Physics&#39;,&#39;98000&#39;)&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">sqle</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Could not insert tuple. &quot;</span><span class="o">+</span><span class="n">sqle</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="query">Query</h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">ResultSet</span><span class="w"> </span><span class="n">rset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;select dept_name, avg(salary)</span>
+<span class="s">    from instructor</span>
+<span class="s">    group by dept_name&quot;</span>
+<span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="n">rset</span><span class="p">.</span><span class="na">next</span><span class="p">())</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rset</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;dept_name&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot; &quot;</span><span class="o">+</span><span class="n">rset</span><span class="p">.</span><span class="na">getFloat</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+- 使用executeQuery()方法执行查询语句后，检索得到的元组会放在一个ResultSet对象上，但是一次只能取其中的一个元组
+- 具体来说，该对象调用next()方法获取下一个元组（如果还有的话），返回值是
+- 另外，该对象提供了一些以get开头的方法来获取元组中具体属性的值，它们接收单个参数，可以使属性名(字符串)，也可以是属性的位置(整数值从1开始，可以看成是属性的编号)，常见的get方法有
+    - getString():可以检索<strong>任意</strong>SQL基本数据类型
+    - getFloat():仅限于获取浮点数</p>
+<h4 id="getting-result-fields">Getting Result Fields</h4>
+<div class="highlight"><pre><span></span><code><span class="n">rset</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="err">“</span><span class="n">dept_name</span><span class="err">”</span><span class="p">)</span>
+<span class="n">rset</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>如果dept_name是select result的第一个参数，上面这两行语句是等价的</p>
+</blockquote>
+<p>对于NULL值，可以使用wasNULL()方法来检查是否获取到了NULL值</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rset</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">rset</span><span class="p">.</span><span class="na">wasNULL</span><span class="p">())</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Got null value&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="prepared-statements">Prepared Statements</h4>
+<p>我们不必预先编写一条完整的SQL语句，而是先创建一条预备语句(Prepared Statements),其中语句中出现的值用<code>?</code>替代(占用符)，之后再将具体的值插入到对应位置上。数据库系统会编译好这种预备语句。在执行这种语句的时候，数据库系统复用先前编译好的预备语句，然后将具体指应用到语句中，构成一条完整的语句</p>
+<ul>
+<li><code>Connection</code>类的<code>prepareStatement()</code>方法用于设置预备语句，该方法返回的是一个<code>PreparedStatement</code>对象，该对象具有<code>executeQuery()</code>和<code>executeUpdate()</code>方法</li>
+<li>在 <code>prepareStatement()</code> 语句内的 SQL 语句具体值必须用 <code>?</code> 替代，之后可以用 set 开头的方法来设置具体值（比如 setInt()、setString()）。这类方法接收两个参数，第 1 个参数指明设置的是第几个 ?（从 1 开始），第 2 个参数是具体值</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pStmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;INSERT INTO instructor VALUES (?,?,?,?)&quot;</span>
+<span class="p">);</span>
+<span class="n">pSmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;88877&quot;</span><span class="p">);</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;Perry&quot;</span><span class="p">);</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Finance&quot;</span><span class="p">);</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">125000</span><span class="p">);</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;88878&quot;</span><span class="p">);</span>
+<span class="n">pStmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+</code></pre></div>
+<ul>
+<li>SQL语句等价为
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;88878&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Perry&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Finance&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">125000</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>在获取用户输入并将其添加到查询时，必须使用预备语句</p>
+<p>切勿通过连接作为输入获取的字符串来创建查询，例如<code>insert into instructor values('"+ID+" ','"+name+" ' dept_name+" ','"+salary+" ');</code>这时候，如果name字段为<code>D'Souza</code>,那么查询就会变成<code>insert into instructor values(’ 88879 ’, ’ D’Souza ’, ’ Finance ’, 125000);</code>这会导致SQL语法错误</p>
+<p>事实上，这就是著名的SQL注入攻击，攻击者可以通过输入恶意字符串来执行SQL语句，比如删除表、插入数据等</p>
+</blockquote>
+<h4 id="sql-injection">SQL injection</h4>
+<blockquote>
+<p>MetaData是描述数据库自身结构、组织、关系和特征的数据，而不是数据库中存储的实际业务数据。它提供了理解和管理数据所需的信息框架</p>
+</blockquote>
+<p>加入在Java程序中执行这样一条SQL语句：</p>
+<div class="highlight"><pre><span></span><code><span class="ss">&quot;SELECT * FROM instructor WHERE name = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&#39;&quot;</span>
+</code></pre></div>
+<p>其中<code>name</code>是字符换变量</p>
+<p>如果 name = "X' OR 'Y' = 'Y"，那么最终的语句就会变成</p>
+<div class="highlight"><pre><span></span><code><span class="ss">&quot;SELECT * FROM instructor WHERE name = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;X&#39; OR &#39;Y&#39; = &#39;Y&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&#39;&quot;</span>
+</code></pre></div>
+<p>整理得</p>
+<div class="highlight"><pre><span></span><code><span class="err">&quot;</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;X&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span>
+</code></pre></div>
+<p>由于WHERE子句恒为true，因此查询语句就能被执行，表里的全部内容都能被查到</p>
+<p>如果使用预备语句及其set方法时，上述问题就不会发生了，因为所有输入的引号都会被转化为转义字符，不会破坏原字符串的结构</p>
+<h4 id="metadata-features">Metadata Features</h4>
+<p>通常，Java程序会在运行时，从数据库系统中获取数据声明</p>
+<p>用于存储执行查询语句的结果的ResultSet接口有一个方法<code>getMetaData()</code>，里面包含结果集的元数据(Metadata)。而这个<code>ResultSetMetaData</code>对象也有一些寻找元数据信息的方法，比如结果的列数、具体列的名称和类型等等，这样我们就能获取数据声明(即模式)了</p>
+<p>执行Query获取ResultSet(重命名为rs后)</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">ResultSetMetaData</span><span class="w"> </span><span class="n">rsmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getMetaData</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnCount</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnName</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnTypeName</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+- <code>getColumnCount()</code>方法返回元数(Arity)即列数
+- <code>getColumnName()</code>方法返回列名
+- <code>getColumnTypeName()</code>方法返回数据类型名，它们都接收单个表示列位置的整型参数(从1开始)
+`</p>
+<p><code>Connection</code> 接口有一个方法 <code>getMetaData()</code>，它返回一个 DatabaseMetaData 对象。而 DatabaseMetaData 接口则提供了寻找<strong>数据库元数据</strong>shen的途径，提供了更为丰富的方法，比如返回产品名、版本号等等</p>
+<div class="highlight"><pre><span></span><code><span class="n">DatabaseMetaData</span><span class="w"> </span><span class="n">dbmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">getMetaData</span><span class="p">();</span>
+<span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="o">=</span><span class="n">dbmd</span><span class="p">.</span><span class="na">getColumns</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="s">&quot;univdb&quot;</span><span class="p">,</span><span class="s">&quot;department&quot;</span><span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">);</span>
+
+<span class="k">while</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;COLUMN_NAME&quot;</span><span class="p">),</span><span class="n">rs</span><span class="p">.</span><span class="na">getSring</span><span class="p">(</span><span class="s">&quot;TYPE_NAME&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>getColumns</code>方法接收四个参数<ul>
+<li>目录名：<code>null</code>表示忽略该值</li>
+<li>模式名</li>
+<li>表名</li>
+<li>列名：<code>%</code>表示返回所有列</li>
+</ul>
+</li>
+</ul>
+<p>DatabaseMetaData 还有其他方法：</p>
+<ul>
+<li><code>getTables()</code>：列出数据库中的所有表。前三个参数和 getColumns() 一致，最后一个参数用于限制符合条件的表，如果设为 null 则返回所有表（包括系统内部的表）</li>
+<li><code>getPrimaryKeys()</code>：获取主键</li>
+<li><code>getCrossReference()</code>：获取外键参照</li>
+</ul>
+<h4 id="transaction-control">Transaction Control</h4>
+<ul>
+<li>默认情况下，每个 SQL 语句都被视为自动提交的单独事务，这对于具有多个更新的事务来说是个比较麻烦的事情</li>
+<li>我们可以在 Connection 中关闭自动提交<ul>
+<li><code>conn.setAutoCommit(false);</code></li>
+</ul>
+</li>
+<li>然后，我们必须显式提交或回滚事务<ul>
+<li><code>conn.commit();</code>或<code>conn.rollback();</code></li>
+</ul>
+</li>
+<li><code>conn.setAutoCommit(true)</code> 表示开启自动提交</li>
+</ul>
+<h3 id="512-sqlj">5.1.2 SQLJ</h3>
+<blockquote>
+<p>JDBC有时过于动态，编译器无法很好地提供捕获错误</p>
+</blockquote>
+<p>在Java中，也提供了嵌入式的SQL语句，这种语句称为SQLJ</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="n">sql</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="nf">deptInfoIter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">avgSal</span><span class="p">)</span>
+<span class="n">deptInfoIter</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="err">#</span><span class="n">sql</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="n">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">avgSal</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">dept_name</span><span class="p">};</span>
+<span class="k">while</span><span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="na">next</span><span class="p">())</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">deptName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="na">dept_name</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">avgSal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iter</span><span class="p">.</span><span class="na">avgSal</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">deptName</span><span class="o">+</span><span class="s">&quot; &quot;</span><span class="o">+</span><span class="n">avgSal</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">iter</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="513-odbc">5.1.3 ODBC</h3>
+<ul>
+<li>开放数据库连接（Open Database Connectivity,ODBC）标准<ul>
+<li>应用程序与数据库服务器通信的标准</li>
+<li>当客户端程序发起ODBC API的调用时，库代码便与服务器通信，执行需要执行的动作，并返回结果</li>
+</ul>
+</li>
+<li>应用于 GUI、电子表格等应用程序</li>
+<li>ODBC 最初为 Basic 和 C 定义，可用于多种语言</li>
+<li>每个支持 ODBC 的数据库系统都提供了一个必须与客户端程序链接的“驱动程序”库</li>
+</ul>
+<p><img alt="alt text" src="../image-68.png" /></p>
+<ul>
+<li>当客户端程序进行ODBC API调用时，库中的代码将与服务器通信以执行请求并获取结果</li>
+<li>ODBC程序首先分配一个SQL环境，然后分配一个数据库连接处理器</li>
+<li>使用SQLConnect()打开数据库连接<ul>
+<li>SQLConnect()的参数：<ul>
+<li>连接处理器</li>
+<li>要连接的服务器</li>
+<li>用户标识符</li>
+<li>密码</li>
+</ul>
+</li>
+<li>还必须指定参数的类型:SQL_NTS,表示前一个参数是以NULL结尾的字符串</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">INT</span><span class="w"> </span><span class="nf">odbcExample</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">RETCODE</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
+<span class="w">    </span><span class="n">HENV</span><span class="w"> </span><span class="n">env</span><span class="p">;</span><span class="c1">//environment </span>
+<span class="w">    </span><span class="n">HDBC</span><span class="w"> </span><span class="n">conn</span><span class="p">;</span><span class="c1">//database connection</span>
+
+<span class="w">    </span><span class="n">SQLAllocEnv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">env</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SQLAllocConnect</span><span class="p">(</span><span class="n">env</span><span class="p">,</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SQLConnect</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="s">&quot;db.yale.edu&quot;</span><span class="p">,</span><span class="n">SQL_NTS</span><span class="p">,</span><span class="s">&quot;avi&quot;</span><span class="p">,</span><span class="n">SQL_NTS</span><span class="p">,</span><span class="s">&quot;avipasswd&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">{</span><span class="n">Do</span><span class="w"> </span><span class="n">actua</span><span class="p">;</span><span class="w"> </span><span class="n">work</span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">SQLDisconnect</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SQLFreeConnect</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SQLFreeEnv</span><span class="p">(</span><span class="n">env</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>程序使用<code>SQLExecDirect()</code>向数据库发送SQL命令</li>
+<li>使用SQLFetch()获取结果元组</li>
+<li>SQLBindCol()将C语言变量绑定到查询结果的属性<ul>
+<li>当获取Tuples时，其<code>attribute</code>值会自动存储在相应的C变量中</li>
+<li>SQLBindCol()的参数：<ul>
+<li>ODBCstmt变量，查询结果中的属性位置</li>
+<li>从SQL到C的类型转换</li>
+<li>变量的地址</li>
+<li>对于字符数组等可变长度类型<ul>
+<li>变量的最大长度</li>
+<li>用于在获取元组时存储实际长度的位置</li>
+<li>注：Length字段返回负值表示该字段为NULL值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">deptname</span><span class="p">[</span><span class="mi">80</span><span class="p">];</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">lenOut1</span><span class="p">,</span><span class="n">lenOut2</span><span class="p">;</span>
+<span class="n">HSTMT</span><span class="w"> </span><span class="n">stmt</span><span class="p">;</span>
+
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">sqlquery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT dept_name,SUM(salary)&quot;</span>
+<span class="w">                </span><span class="s">&quot;FROM instructor&quot;</span>
+<span class="w">                </span><span class="s">&quot; GROUP BY dept_name&quot;</span><span class="p">;</span>
+<span class="n">SQLAllocStmt</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="o">&amp;</span><span class="n">stmt</span><span class="p">);</span>
+<span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SQLExecDirect</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span><span class="n">sqlquery</span><span class="p">,</span><span class="n">SQL_NTS</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SQL_SUCCESS</span><span class="p">){</span>
+<span class="w">    </span><span class="n">SQLBindCol</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">SQL_C_CHAR</span><span class="p">,</span><span class="w"> </span><span class="n">deptname</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lenOut1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SQLBindCol</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">SQL_C_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">salary</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lenOut2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">SQLFetch</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SQL_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; %s %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">deptname</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">SQLFreeStmt</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span><span class="n">SQL_DROP</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="odbc-prepared-statements">ODBC Prepared Statements</h4>
+<ul>
+<li>预备语句<ul>
+<li>SQL语句在数据库中已经编译好</li>
+<li>可以有占位符：例如<code>insert into account values(?,?,?)</code></li>
+<li>使用占位符的实际值重复执行</li>
+</ul>
+</li>
+<li>使用SQLPrepare()准备预备语句<ul>
+<li>SQLPrepare(stmt,<code>&lt;SQL String&gt;</code>);</li>
+</ul>
+</li>
+<li>绑定参数<ul>
+<li>SQLBindParameter(stmt,<code>&lt;parameter#&gt;</code>,...type information and value omiitted for simplicity..)</li>
+</ul>
+</li>
+<li>执行语句 <ul>
+<li>retcode = SQLExecute(stmt);</li>
+</ul>
+</li>
+</ul>
+<h4 id="more-odbc-features">More ODBC Features</h4>
+<ul>
+<li>元数据功能：<ul>
+<li>查找数据库中的所有关系，并在数据库中查找查询结果或关系的列名称和类型</li>
+</ul>
+</li>
+<li>默认情况下，每个SQL语句都被视为自动提交的单独事务<ul>
+<li>可以关闭连接上的自动提交<code>SQLSetConnectOption(conn,SQL_AUTOCOMMIT,0)</code></li>
+<li>事务必须由SQLTransaction(conn,SQL_COMMIT)或SQLTransact(conn, SQL_ROLLBACK)进行处理</li>
+</ul>
+</li>
+</ul>
+<h3 id="514-embedded-sql">5.1.4 Embedded SQL</h3>
+<ul>
+<li>SQL标准定义了SQL在各种编程语言中的嵌入</li>
+<li>嵌入SQL查询的语言称为主机语言，主机语言中允许的SQL结构包括嵌入式SQL</li>
+<li>这些语言的基本形式遵循在操作系统R将SQL嵌入到PL/1中的形式</li>
+<li>EXEC SQL语句在主机语言中用于标识对预处理器的嵌入式SQL请求：<ul>
+<li>EXEC SQL 嵌入式SQL语句</li>
+<li>这样的语句因语言而异</li>
+</ul>
+</li>
+<li>在某些语言中(如COBOL)中，分号被ED-EXEC替换</li>
+<li>在 Java 中，嵌入使用 #SQL { .... }; ；在 C 中，使用 EXEC SQL <code>&lt;embedded SQL statement&gt;</code>;</li>
+<li>在执行任何 SQL 语句之前，程序必须首先连接到数据库</li>
+<li>这是通过以下方式完成的：<ul>
+<li>使用密码的 EXEC-SQL 连接到服务器用户用户名;</li>
+<li>此处，server 标识要建立连接的服务器</li>
+</ul>
+</li>
+</ul>
+<h4 id="variables">Variables</h4>
+<ul>
+<li>主机语言的变量可以在嵌入式SQL语句中使用<ul>
+<li>他们的前面有冒号以区别于SQL中的变量，eg.<code>credit_amount</code></li>
+</ul>
+</li>
+<li>如上所述使用的主机变量必须在<code>DECLARE</code>部分声明，如下面所示。但是用于声明变量的语法尊村通常的主机语言语法
+<div class="highlight"><pre><span></span><code><span class="n">EXEC</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="n">BEGIN</span><span class="w"> </span><span class="n">DECLARE</span><span class="w"> </span><span class="n">SECTION</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">account_number</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">credit_amount</span><span class="p">;</span>
+<span class="n">EXEC</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="n">END</span><span class="w"> </span><span class="n">DECLARE</span><span class="w"> </span><span class="n">SECTION</span><span class="p">;</span><span class="w">   </span>
+</code></pre></div></li>
+</ul>
+<h4 id="query_1">Query</h4>
+<ul>
+<li>要编写嵌入式SQL查询，我们使用<code>declare a cursor for &lt;SQL query&gt;语句</code>,其中变量c用于标识查询</li>
+<li>在主机语言中，查找完成超过主机语言中变量credit_amount中存储的学分的学生的ID和姓名</li>
+<li>在SQL中指定查询，如下所示：
+<div class="highlight"><pre><span></span><code><span class="k">EXEC</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span>
+<span class="k">declare</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">cursor</span><span class="w"> </span><span class="k">for</span>
+<span class="k">select</span><span class="w"> </span><span class="n">ID</span><span class="p">,</span><span class="n">name</span><span class="w"> </span>
+<span class="k">from</span><span class="w"> </span><span class="n">student</span>
+<span class="k">where</span><span class="w"> </span><span class="n">tot_cred</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="n">credit_amount</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+<h4 id="open-and-fetch">Open and Fetch</h4>
+<p>open语句如下所示</p>
+<div class="highlight"><pre><span></span><code><span class="k">EXEC</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="k">OPEN</span><span class="w"> </span><span class="k">c</span><span class="p">;</span>
+</code></pre></div>
+<p>此语句使数据库系统执行查询并将结果保存在临时关系中，查询在执行open语句时使用主句语言变量credit-amount的值</p>
+<p>fetch语句导致查询结果中的一个元组值放在主机语言变量上：</p>
+<div class="highlight"><pre><span></span><code><span class="k">EXEC</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="k">FETCH</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="p">:</span><span class="n">si</span><span class="p">,</span><span class="w"> </span><span class="p">:</span><span class="n">sn</span><span class="p">;</span>
+</code></pre></div>
+<p>重复调用fetch可以获取查询结果中的连续元组</p>
+<h4 id="close">Close</h4>
+<p>SQL 通信区域 （SQL Communication Area, SQLCA）中名为 SQLSTATE 的变量设置为“02000”，以指示没有更多数据</p>
+<p>我们可以用 close 语句会导致<strong>数据库系统删除保存查询结果的临时关系</strong>：</p>
+<div class="highlight"><pre><span></span><code><span class="k">EXEC</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="k">CLOSE</span><span class="w"> </span><span class="k">c</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="update_1">Update</h4>
+<ul>
+<li>嵌入式SQL表达式也可以用于数据库修改(更新、插入和删除)</li>
+<li>可以通过声明游标用于更新cursor获取的元组</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">EXEC</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span>
+<span class="k">declare</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">cursor</span><span class="w"> </span><span class="k">for</span>
+<span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Music&#39;</span>
+<span class="k">for</span><span class="w"> </span><span class="k">update</span>
+</code></pre></div>
+<ul>
+<li>然后我们通过在cursor上执行fetch操作来迭代元组，在获取每个元组之后，我们执行以下代码：
+<div class="highlight"><pre><span></span><code><span class="k">update</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span>
+<span class="k">set</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salary</span><span class="o">+</span><span class="mi">1000</span>
+<span class="k">where</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">c</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+<h2 id="52-procedural-constructs-in-sql">5.2 Procedural Constructs in SQL</h2>
+<h3 id="521-procedural-extensions-and-stored-procedurals">5.2.1 Procedural Extensions and Stored Procedurals</h3>
+<ul>
+<li>SQL提供模块语言<ul>
+<li>允许在SQL中定义过程，使用if-then-else语句，for和while循环等</li>
+</ul>
+</li>
+<li>存储过程<ul>
+<li>可以在数据库中存储过程</li>
+<li>然后使用call语句执行他们</li>
+<li>允许外部应用程序在不知道详细信息的情况下对数据库进行操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="522-functions-and-procedures">5.2.2 Functions and Procedures</h3>
+<ul>
+<li>函数和过程允许将"业务逻辑(Business Logic)"存储在数据库中并根据SQL语句执行</li>
+<li>这些可以由SQL的过程组件或外部编程语言定义</li>
+<li>我们在这里介绍的语法由SQL标准定义<ul>
+<li>大多数数据库都实现此语法的非标准版本</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-sql-functions">1 SQL Functions</h4>
+<ul>
+<li>定义一个函数，该函数在给定部门名称的情况下，返回该部门中的老师人数总数</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">Declaration</span>
+<span class="k">create</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">dept_count</span><span class="p">(</span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">integer</span><span class="c1">--指定返回值类型</span>
+<span class="w">    </span><span class="k">begin</span>
+<span class="w">    </span><span class="k">declare</span><span class="w"> </span><span class="n">d_count</span><span class="w"> </span><span class="n">interger</span><span class="p">;</span><span class="c1">--声明一个局部变量d_count</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">d_count</span>
+<span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="c1">--结果存入d_count</span>
+<span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dept_name</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">d_count</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="o">//</span><span class="w"> </span><span class="n">Invocation</span>
+<span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="n">budget</span>
+<span class="k">from</span><span class="w"> </span><span class="n">department</span>
+<span class="k">where</span><span class="w"> </span><span class="n">dept_count</span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+</code></pre></div>
+<p>此外，SQL标准还支持将表作为返回结果的函数，这样的函数称为表函数(Tble Functions),也可以看作是带参数的实体化视图。具体的函数定义和调用如下所示</p>
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">Declaration</span>
+<span class="k">create</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">instructor_of</span><span class="p">(</span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="w">    </span><span class="k">returns</span><span class="w"> </span><span class="k">table</span><span class="p">(</span>
+<span class="w">        </span><span class="n">ID</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">        </span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">        </span><span class="n">salary</span><span class="w"> </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">table</span><span class="p">(</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span>
+<span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">instructor_of</span><span class="p">.</span><span class="n">dept_name</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="o">//</span><span class="w"> </span><span class="n">Invocation</span>
+<span class="k">select</span><span class="w"> </span><span class="o">*</span>
+<span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="p">(</span><span class="n">instructor_of</span><span class="p">(</span><span class="s1">&#39;Finance&#39;</span><span class="p">));</span>
+</code></pre></div>
+<ul>
+<li>在函数定义内使用参数时，如果参数名有重名的情况，那么需要加上<code>函数名.</code>前缀(这就是在第十一行改为<code>instructor_of</code>)</li>
+</ul>
+<h4 id="2-sql-procedures">2 SQL Procedures</h4>
+<ul>
+<li>在上面的例子中，dept_count函数还可以改写为<code>procedure</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">Declaration</span>
+<span class="k">create</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">dept_count_proc</span><span class="p">(</span>
+<span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="n">d_count</span><span class="w"> </span><span class="nb">integer</span>
+<span class="p">)</span>
+<span class="k">begin</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">d_count</span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dept_count_proc</span><span class="p">.</span><span class="n">dept_name</span>
+<span class="k">end</span>
+</code></pre></div>
+<ul>
+<li>关键字<code>in</code>和<code>out</code>分别表示接收进来的参数和存放返回结果的参数</li>
+<li>我们可以使用call语句从SQL过程或嵌入式SQL调用过程</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">declare</span><span class="w"> </span><span class="n">d_count</span><span class="w"> </span><span class="nb">integer</span><span class="p">;</span>
+<span class="k">call</span><span class="w"> </span><span class="n">dept_count_proc</span><span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span><span class="n">d_count</span><span class="p">);</span>
+</code></pre></div>
+<p>SQL允许多个参数不同的函数或过程同名，因为SQL会同时根据函数/过程名以及参数来识别函数/过程 </p>
+<h3 id="523-procedural-constructs">5.2.3 Procedural Constructs</h3>
+<ul>
+<li>大多数数据库系统都实现了一下标准语法的变体<ul>
+<li>所以用户必须阅读系统手册，了解哪些功能适用于用户的系统</li>
+</ul>
+</li>
+<li>复合语句：begin...end...<ul>
+<li>我们可以再begin和end之间包含多个SQL语句</li>
+<li>局部变量可以再复合语句中声明</li>
+</ul>
+</li>
+<li>循环语句
+<div class="highlight"><pre><span></span><code><span class="c1">--while statements</span>
+<span class="n">while</span><span class="w"> </span><span class="nb">boolean</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>
+<span class="w">    </span><span class="n">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">statements</span><span class="p">;</span>
+<span class="k">end</span><span class="w"> </span><span class="n">while</span>
+
+<span class="c1">--Repeat Statements </span>
+<span class="n">repeat</span><span class="w"> </span>
+<span class="w">    </span><span class="n">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">statements</span><span class="p">;</span>
+<span class="k">until</span><span class="w"> </span><span class="nb">boolean</span><span class="w"> </span><span class="n">expression</span>
+
+<span class="c1">--for statements</span>
+<span class="k">declare</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="c1">--r作为当前的一个游标，对关系中的每个元组进行遍历</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">budget</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="w"> </span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Music&#39;</span>
+<span class="k">do</span><span class="w"> </span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="n">r</span><span class="p">.</span><span class="n">budget</span>
+<span class="k">end</span><span class="w"> </span><span class="k">for</span>
+</code></pre></div></li>
+<li>循环体内使用<code>leave</code>关键字可提前退出循环，而<code>iterate</code>则忽略当前元组，处理下一个元组。它们类似于编程语言的<code>break</code>和<code>continue</code></li>
+<li>条件分之语句</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nb">boolean</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span>
+<span class="k">then</span><span class="w"> </span><span class="k">statement</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">compound</span><span class="w"> </span><span class="k">statement</span>
+<span class="k">else</span><span class="w"> </span><span class="nb">boolean</span><span class="w"> </span><span class="n">expression</span>
+<span class="k">then</span><span class="w"> </span><span class="k">statement</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">compound</span><span class="w"> </span><span class="k">statement</span>
+<span class="k">else</span><span class="w"> </span><span class="k">statement</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">compound</span><span class="w"> </span><span class="k">statement</span>
+<span class="k">end</span><span class="w"> </span><span class="k">if</span>
+</code></pre></div>
+<h3 id="524-external-language-functionsprocedures">5.2.4 External Language Functions/Procedures</h3>
+<p>上述介绍的构造块鲜有数据库支持，因此程序员转而使用外部的编程语言：先用其它编程语言定义函数后，再用SQL语句导入外部的过程或函数，比如 
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">dept_count_proc</span><span class="p">(</span>
+<span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span>
+<span class="p">)</span>
+<span class="k">language</span><span class="w"> </span><span class="k">C</span><span class="w"> </span>
+<span class="k">external</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="s1">&#39;/usr/avi/bin/dept_count_proc&#39;</span><span class="p">;</span>
+
+<span class="k">create</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">dept_count</span><span class="p">(</span>
+<span class="w">    </span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">return</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span>
+<span class="k">language</span><span class="w"> </span><span class="k">C</span><span class="w"> </span>
+<span class="k">external</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="s1">&#39;/usr/avi/bin/dept_count_func&#39;</span><span class="p">;</span>
+</code></pre></div>
+- 外部语言功能/过程的好处：许多操作更高效，表现力更强
+- 缺点：
+    - 实现功能的代码可能需要加载导数据库系统中并在数据库系统的地址空间中执行，可能会有
+        - 数据库结构意外损坏的风险
+        - 安全风险，允许用户访问未经授权的数据
+    - 还有其它选择，它们可以提供良好的安全性，但代价是性能可能会变差
+    - 当效率比安全性更重要时，更偏向在数据库系统空间中直接执行</p>
+<p>对于外部语言造成的风险，数据库系统提供了一些安全机制，比如：</p>
+<ul>
+<li>使用沙盒技术<ul>
+<li>即使用像 Java 这样的安全语言，它不能用于访问/损坏数据库代码的其他部分</li>
+</ul>
+</li>
+<li>或者，在单独的进程中运行外部语言函数/过程，而不访问数据库进程的内存<ul>
+<li>通过进程间通信传输参数和结果</li>
+</ul>
+</li>
+<li>两者都有性能开销</li>
+<li>许多数据库系统同时支持上述方法以及在数据库系统地址空间中直接执行</li>
+</ul>
+<h2 id="53-triggers">5.3 Triggers</h2>
+<p>触发器(Trigger)是一种系统自动执行的语句，作为对数据库修改的“副作用”。要想定义一个触发器，需要：
+- 指定触发器何时执行--这点可以分解为检查触发器的时间(Event)
+    - 可以使插入、删除或者更新
+    - 更新时的触发器可以限制为特定属性<code>after update of takes on grade</code>
+- 可以引用更新之前和之后的属性值
+    - <code>referencing old row as</code>:用于删除和更新
+    - <code>referencing new row as</code>:用于插入和更新
+- 执行触发器满足的条件(Condition)
+- 指定触发器需要执行的动作(Actions)</p>
+<p>要设计触发机制，我们必须：</p>
+<ul>
+<li>指定要执行触发器的条件</li>
+<li>
+<p>指定触发器执行时要执行的操作</p>
+</li>
+<li>
+<p>对于一个表格<code>account_log(account,amount,datetime)</code>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="n">account_trigger</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">balance</span>
+<span class="k">referencing</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">new_row</span>
+<span class="k">referencing</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">old_row</span>
+<span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span>
+<span class="k">when</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">orow</span><span class="p">.</span><span class="n">balance</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="k">or</span><span class="w"> </span>
+<span class="w">    </span><span class="n">orow</span><span class="p">.</span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">balance</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">50000</span>
+<span class="k">begin</span><span class="w"> </span>
+<span class="w">    </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">account_log</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="n">nrow</span><span class="p">.</span><span class="n">account</span><span class="o">-</span><span class="nb">number</span><span class="p">,</span><span class="n">nrow</span><span class="p">.</span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">orow</span><span class="p">.</span><span class="n">balance</span><span class="p">,</span><span class="k">current_time</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>time_slot_id</code>不是主键，因此我们无法创建从section到timeslot的外检约束，再删除操作中不会引起其他影响。但我们可以设计一个触发器，用来检查当前课程的<code>time_slot_id</code>是否在表内，在section和timeslot上使用触发器来实施完整性约束</p>
+</li>
+<li>
+<p>检查新记录的<code>time_slot_id</code>是否存在于<code>timeslot</code>表中，从而保证section表中的<code>time_slot_id</code>都是有效的
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">timeslot_check1</span><span class="w"> </span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">section</span>
+<span class="k">REFERENCING</span><span class="w"> </span><span class="k">NEW</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nrow</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">nrow</span><span class="p">.</span><span class="n">time_slot_id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">time_slot_id</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">time_slot</span><span class="w"> </span><span class="cm">/* time_slot_id not present in time_slot */</span>
+<span class="p">))</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">ROLLBACK</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li><code>for each row</code>字句能够显式迭代每一个被插入的行记录</li>
+<li><code>referencing new row as nrow</code>子句创建了一个过渡变量(Transition Variable)，用于临时存储被插入的行记录</li>
+<li>
+<p><code>when</code>语句指明了触发器的触发条件</p>
+</li>
+<li>
+<p>time_slot_id 不是主键，所以当 time_slot_id 已经被删完了，但依然有课程在引用，就要 rollback</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="n">timeslot_check2</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="k">delete</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">timeslot</span>
+<span class="k">referencing</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">orow</span>
+<span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span>
+<span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">orow</span><span class="p">.</span><span class="n">time_slot_id</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="n">time_slot_id</span>
+<span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">time_slot</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="n">orow</span><span class="p">.</span><span class="n">time_slot_id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="n">time_slot_id</span>
+<span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">section</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">begin</span>
+<span class="w">    </span><span class="k">rollback</span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>
+<p>触发器可以在事件之前激活，这可以用做额外的约束</p>
+</li>
+<li>
+<p>将空白部分设置为NULL
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="n">setnull_trigger</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">takes</span><span class="w">  </span>
+<span class="k">referencing</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nrow</span><span class="w">  </span>
+<span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span><span class="w">  </span>
+<span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">nrow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="k">begin</span><span class="w"> </span><span class="k">atomic</span><span class="w">  </span><span class="c1">--作为一个原子操作执行</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w">  </span>
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>我们使用触发器来保持 credits_earned 的值，如果本来挂科，或者没有成绩，更新后不再挂科而且有成绩，就把学分加上去。</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">credits_earned</span><span class="w"> </span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">takes</span>
+<span class="k">REFERENCING</span><span class="w"> </span><span class="k">NEW</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nrow</span>
+<span class="k">REFERENCING</span><span class="w"> </span><span class="k">OLD</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">orow</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">WHEN</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">orow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">orow</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">)</span>
+<span class="k">BEGIN</span><span class="w"> </span><span class="k">ATOMIC</span>
+<span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">student</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">tot_cred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tot_cred</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">credits</span>
+<span class="w">         </span><span class="k">FROM</span><span class="w"> </span><span class="n">course</span>
+<span class="w">         </span><span class="k">WHERE</span><span class="w"> </span><span class="n">course</span><span class="p">.</span><span class="n">course_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">course_id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div>
+<p>很多数据库系统还支持其他触发事件，比如用户登录数据库、系统关机、修改系统设置等。</p>
+<p>在上述例子中，可以看到触发器既可以在事件发生前执行，也可以在事件发生后执行。一般来说，前者作为一个额外的约束限制，不仅阻止非法行为引起的错误，还要采取补救措施，使语句变得合法。</p>
+<p>除了将触发器的动作一行行地应用到表中的每个行记录上，也可以将触发器一次性作用于满足 SQL 的所有行记录上，只要：</p>
+<ul>
+<li>将 for each row 改为 for each statement</li>
+<li>并且使用 referencing old table as 和 referencing new table as 来创建过渡表</li>
+<li>我们还可以决定启用或禁用触发器，相关语法为：alter trigger trigger_name disable</li>
+</ul>
+<p>有些数据库采用另一种语法：disable trigger trigger_name。
+此外，还可以删除触发器：drop trigger trigger_name。</p>
+<p>与函数 / 过程的语法类似，由于很多数据库系统在 SQL 相关标准建立前就广泛使用触发器了，因此几乎每个数据库系统都有自己的触发器语法，它们是互不兼容的</p>
+<h3 id="when-not-to-use-triggers">When not to use Triggers</h3>
+<p>实际上，很多看似能够用触发器解决的问题， SQL 标准早已为我们提供了更方便的方法来解决这些问题，所以在以下场景中，没有必要使用触发器：</p>
+<ul>
+<li>维护实体化视图：现在很多数据库系统都支持自动维护了，因此无需使用触发器手动维护</li>
+<li>维护数据库的拷贝：理由同上</li>
+<li>从备份拷贝上加载数据，或备份地点上复制数据库更新</li>
+</ul>
+<p>编写触发器的时候需小心，因为在运行时，一个触发器的错误可能会触发下一个触发器，最严重的情况下会出现无限的连锁反应。解决方案有：</p>
+<ul>
+<li>某些数据库系统规定了最大的触发器链的长度，超过限制就会报错</li>
+<li>另外的数据库系统泽会根据触发器是否尝试引用更新后导致自身首先出发的关系来判断是否产生错误</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
