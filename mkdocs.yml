@@ -1,0 +1,151 @@
+site_name: BruceYang's Blog
+nav: 
+  - 主页: index.md
+  - 关于: about.md
+  - 目录: 
+    - 计算机体系结构(Computer Architecture):
+      - Chapter 1 Fundamentals of Computer Design: Tutorial/计算机体系结构(Computer Architecture)/Chapter 1.md
+      - Chapter 2 Pipeline: Tutorial/计算机体系结构(Computer Architecture)/Chapter 2.md
+      - Chapter 3 Memory Hierarchy: Tutorial/计算机体系结构(Computer Architecture)/Chapter 3.md
+      - Chapter 4 Instruction-Level Parallelism: Tutorial/计算机体系结构(Computer Architecture)/Chapter 4.md
+      - Chapter 5 DLP and TLP: Tutorial/计算机体系结构(Computer Architecture)/Chapter 5.md
+    - 数据库系统(Database System): 
+      - 关于: Tutorial/数据库系统(Database System)/index.md
+      - Notes: 
+        - Chapter 1 Introduction: Tutorial/数据库系统(Database System)/Chapter 1 .md
+        - Chapter 2 Introduction to Relational Model: Tutorial/数据库系统(Database System)/Chapter 2.md
+        - Chapter 3 Introduction to SQL: Tutorial/数据库系统(Database System)/Chapter 3.md
+        - Chapter 4 Intermediate SQL: Tutorial/数据库系统(Database System)/Chapter 4.md
+        - Chapter 5 Advanced SQL: Tutorial/数据库系统(Database System)/Chapter 5.md
+        - Chapter 6 Entity-Relationship Model: Tutorial/数据库系统(Database System)/Chapter 6.md
+        - Chapter 7 Relational Database Design: 
+          - Notes: Tutorial/数据库系统(Database System)/Chapter 7.md
+          - 相关题型的整理: 
+            - 相关练习题及解答: Tutorial/数据库系统(Database System)/题型/相关题型的整理.md
+            - 求候选键: Tutorial/数据库系统(Database System)/题型/求候选键.md
+            - 正则覆盖: Tutorial/数据库系统(Database System)/题型/正则覆盖.md
+            - 判断有损分解与无损分解: Tutorial/数据库系统(Database System)/题型/判断有损分解与无损分解.md
+            - 将关系模式分解为3NF: Tutorial/数据库系统(Database System)/题型/将关系模式分解为3NF.md
+        - Chapter 8: Tutorial/数据库系统(Database System)/Chapter 8.md
+
+      - HomeWork:
+        - HomeWork 1: Tutorial/数据库系统(Database System)/数据库作业/HW1.md
+        - HomeWork 2: Tutorial/数据库系统(Database System)/数据库作业/HW2.md
+        - HomeWork 3: Tutorial/数据库系统(Database System)/数据库作业/HW3.md
+        - HomeWork 4: Tutorial/数据库系统(Database System)/数据库作业/HW4.md
+        - HomeWork 5: Tutorial/数据库系统(Database System)/数据库作业/HW5.md
+        - HomeWork 6: Tutorial/数据库系统(Database System)/数据库作业/HW6.md
+    - 面向对象程序设计(Oriented Object Programming): 
+      - Notes: 
+        - Chapter 1 Introduction: Tutorial/面向对象程序设计(OOP)/Chapter 1.md
+        - Chapter 2 Container: Tutorial/面向对象程序设计(OOP)/Chapter 2.md
+        - Chapter 3 Class: Tutorial/面向对象程序设计(OOP)/Chapter 3.md
+        - Chapter 4 Inside Object: Tutorial/面向对象程序设计(OOP)/Chapter 4.md
+        - Chapter 5 Inherence: Tutorial/面向对象程序设计(OOP)/Chapter 5.md
+      - HW Question: Tutorial/面向对象程序设计(OOP)/题目集.md
+      - WK's Question: Tutorial/面向对象程序设计(OOP)/Quiz.md
+    - 跨专业选修课:
+      - 会计学:
+        - 笔记:
+          - 第一章: Tutorial/会计学/Chapter1.md
+          - 第二章 会计要素与复式记账: Tutorial/会计学/Chapter2.md
+          - 第三章 会计循环: Tutorial/会计学/Chapter3.md
+          - 第四章 货币资金与交易性金融资产: Tutorial/会计学/Chapter4.md
+          - 第五章 应收款项: Tutorial/会计学/Chapter5.md
+          - 第六章 存货: Tutorial/会计学/Chapter6.md
+        - 作业: 
+          - 第一章习题二: Tutorial/会计学/作业/HW1_杨思行_3230104703.pdf
+          - 第二章习题一、习题二: Tutorial/会计学/作业/HW2_杨思行_3230104703.pdf
+          - 第二章习题五: Tutorial/会计学/作业/第二章习题5杨思行_3230104703.pdf
+          - 第三章习题一: Tutorial/会计学/作业/第三章习题1杨思行_3230104703.pdf
+          - 第三章习题二、习题三: Tutorial/会计学/作业/第三章习题2.3杨思行_3230104703.pdf
+          - 第四章习题一: Tutorial/会计学/作业/习题4.1杨思行.pdf
+          - 第四章习题二、习题三: Tutorial/会计学/作业/第四章习题2习题3杨思行.pdf
+          - 第五章习题一: Tutorial/会计学/作业/第五章习题1杨思行.pdf
+          - 第五章习题二、三、四、五、六: Tutorial/会计学/作业/第五章习题2.3.4.5.6杨思行.md
+      - 宏观经济学(甲):
+        - 笔记:
+          - 第十三章 失业、通货膨胀和经济周期: Tutorial/宏观经济学(甲)/Chapter 13.md
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - themes/stylesheets/custom.js
+  # mermaid的配置脚本，字体大小，图表颜色等。
+  - javascripts/optionalConfig.js
+  # mermaid的加载脚本，也可以在这里配置mermaid
+  - javascripts/mermaidloader.js
+  - javascripts/umlconvert.js
+  # mermaid渲染
+  - https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs
+  - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
+  - https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        # Mermaid diagrams
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+
+theme:
+  name: material
+  icon: 
+    admonition:
+        note: octicons/tag-16
+        abstract: octicons/checklist-16
+        info: octicons/info-16
+        tip: octicons/squirrel-16
+        success: octicons/check-16
+        question: octicons/question-16
+        warning: octicons/alert-16
+        failure: octicons/x-circle-16
+        danger: octicons/zap-16
+        bug: octicons/bug-16
+        example: octicons/beaker-16
+        quote: octicons/quote-16
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to happy mode
+      accent: pink
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: blue grey
+      accent: pink
